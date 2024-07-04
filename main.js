@@ -24,11 +24,14 @@ function calculaTempo(tempoObjetivo){
     segundos = segundos%60
     minutos = minutos%60
     horas = horas%24
+    return [dias,horas,minutos,segundos]
 }
-
+let contadorPrimeiro = calculaTempo(tempoObjetivo1)
+contador[0].textContent = `Faltam ${contadorPrimeiro[0]} dias, ${contadorPrimeiro[1]} horas, ${contadorPrimeiro[2]} minutos e ${contadorPrimeiro[3]} segundos`
+let contadorSegundo = calculaTempo(tempoObjetivo2)
+contador[1].textContent = `Faltam ${contadorSegundo[0]} dias, ${contadorSegundo[1]} horas e ${contadorSegundo[2]} minutos e ${contadorSegundo[3]} segundos`
 // Definimos variáveis
 // Fazemos calculos usando as variáveis que criamos e o tempoObjetivo junto com agora
-contador[0].textContent = `Faltam ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segunds`
 for (let i = 0 ; i < botoes.length ; i++){
     botoes[i].onclick = function (){
         for (let j = 0; j < botoes.length ; j++){

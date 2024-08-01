@@ -30,7 +30,12 @@ span{
     width: 100%;
     max-width: 1200px;
 }
-
+.contador{
+    padding: 0 16px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
 .titulo-principal{
     text-align: center;
     width: 100%;
